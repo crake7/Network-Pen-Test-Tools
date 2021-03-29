@@ -29,5 +29,6 @@ class IP(Structure):
         self.src_address = socket.inet_ntoa(struct.pack("<L", self.src))
         self.dst_address = socket.inet_ntoa(struct.pack("<L", self.dst))
 
-        
-        
+
+mypacket = IP(buff)
+print(f'{mypacket.src_address} -> {mypacket.dst_address}')
