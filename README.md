@@ -37,20 +37,20 @@ $ cd myvirtualenvfolder
 1. Download the repo: `$ sudo git clone https://github.com/crake7/Network-Pen-Test-Tools.git`
 2. Check the **Tools** section below to learn about each tool.
 3. Note that some tools will need you to download additional libraries. 
-4. 
+4. If the **Additional Info** is checked, check the **Useful Info** section below the table.
 
 ## Tools
 
 * <h3>Networking Tools</h3>
 
-   | Program Name | Description| Libraries| Additional Info |
+   | Program Name | Description| Libraries| Useful Info |
    | -------- | --- | --- | --- | 
-   | `tcp-client.py`| Basic TCP client to test for services, fuzz, or perform any number of other tasks. | N/A |
-   | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. | N/A |
-   | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | N/A |
-   | `netcat.py`| Simple client-server socket tool to run a shell, upload files and execute a command (Netcat-friendly). | N/A |
-   | `proxy.py`| TCP proxy to forward and modify traffic, or assess network-based software. | N/A |
-   | `ssh_cmd.py`| Avoid dectection making a connection to an SSH server and run a single command. | Paramiko | 
+   | `tcp-client.py`| Basic TCP client to test for services, fuzz, or perform any number of other tasks. | N/A | |
+   | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. | N/A ||
+   | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | N/A ||
+   | `netcat.py`| Simple client-server socket tool to run a shell, upload files and execute a command (Netcat-friendly). | N/A | ⚠️ |
+   | `proxy.py`| TCP proxy to forward and modify traffic, or assess network-based software. | N/A ||
+   | `ssh_cmd.py`| Avoid dectection making a connection to an SSH server and run a single command. | Paramiko | ⚠️ |
 
 
 
