@@ -61,7 +61,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 `netcat.py` 
 
 * To run the script in **server** mode, you need to add the `-l` flag: `$ python3 netcat.py -t 10.0.0.2 -l -c`
-* To run the script in **client** mode, you only need the `t` and `p` flags: `$python netcat.py -t 10.0.0.2 -p 5555`
+* To run the script in **client** mode, you only need the `-t` and `-p` flags: `$python netcat.py -t 10.0.0.2 -p 5555`
 * When you connect a client to a server, the script reads from your STDIN and will continue this way until it receives a end-of-file (EOF) marker. To send the EOF, press CTRL-D: `CTRL-D`
 
 
