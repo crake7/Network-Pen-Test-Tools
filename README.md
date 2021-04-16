@@ -17,4 +17,12 @@ This repo is an addition to my previous repo [/Malware-Dev-and-Network-Exploitat
 
 ## Requirements
 
-It is suggested to use Python3 with a *virtual environment*
+It is recommended to use this repository using a *virtual environment*. This keep your project and its dependencies separate from your main Python installation.
+```
+$ sudo apt-get install python3-venv
+$ sudo mkdir myvirtualenvfolder
+$ cd myvirtualenvfolder
+~/myvirtualenvfolder$ python3 -m venv virtualv
+~/myvirtualenfolderv$ source virtualv/bin/activate
+(virtualv) ~/myvirtualenvfolder$ python
+```
