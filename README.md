@@ -43,7 +43,7 @@ $ cd myvirtualenvfolder
 * <h3>Networking Tools</h3>
 
    | Program Name | Description| Libraries| Additional Info |
-   | -------- | --- | --- | --- |
+   | -------- | --- | --- | --- | 
    | `tcp-client.py`| Basic TCP client to test for services, fuzz, or perform any number of other tasks. | N/A |
    | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. | N/A |
    | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | N/A |
@@ -55,5 +55,5 @@ $ cd myvirtualenvfolder
 
 ## Useful Info
 
-
+Some programs may need you to be mindful of additional information. I have included some notes in this section
 
