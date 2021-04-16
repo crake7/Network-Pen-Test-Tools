@@ -45,7 +45,7 @@ $ cd myvirtualenvfolder
    | `tcp-client.py`| Basic TCP client to test for services, fuzz, or perform any number of other tasks. | 
    | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. | 
    | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | 
-   | `netcat.py`| Simple network tool to run a shell, upload files and execute a command. | 
+   | `netcat.py`| Simple network tool to run a shell, upload files and execute a command. Netcat-friendly. | 
 
 
 
