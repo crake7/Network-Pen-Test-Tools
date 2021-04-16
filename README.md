@@ -2,8 +2,8 @@
 <h4 align="center">An NEW assortment of Penetration Testing tools written in Python 3.</h4>
 
 <p align="center">
-  <a href="#How-to">How To</a> •
   <a href="#Requirements">Requirements</a> •
+  <a href="#How-to">How To</a> •
   <a href="#Tools">Tools</a> •
   <a href="#Credits">Credits</a>
 </p>
@@ -26,4 +26,11 @@ $ cd myvirtualenvfolder
 ~/myvirtualenfolderv$ source virtualv/bin/activate
 (virtualv) ~/myvirtualenvfolder$ python
 ```
-* An IDE: **VS CODE** suggested: `apt-get install code`
+* An IDE: **VS Code** suggested: `apt-get install code` or download it [here](``https://code.visualstudio.com/download)
+
+* Python 3.6 or higher. Installation depends on your OS, if you need help, click [here](https://realpython.com/installing-python/)
+
+## How-to
+
+1. Download the repo: `sudo git clone https://github.com/crake7/Network-Pen-Test-Tools.git`
+2. Check the **Tools** section below to learn about each tool.
