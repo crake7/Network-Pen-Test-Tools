@@ -51,7 +51,7 @@ $ cd myvirtualenvfolder
    | `netcat.py`| Simple client-server socket tool to run a shell, upload files and execute a command (Netcat-friendly). | N/A | ⚠️ |
    | `proxy.py`| TCP proxy to forward and modify traffic, or assess network-based software. | N/A ||
    | `ssh_cmd.py`| Avoid dectection making a connection to an SSH server and run a single command. | Paramiko | ⚠️ |
-
+   | `ssh_rcmd.py`| Reverse SSH server to send commands from an SSH server to an SSH client. Useful for Windows clients. | Paramiko | ⚠️ |
 
 
 ## Useful Info
@@ -67,4 +67,6 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 `ssh_cmd.py`
 
-* fsdfsdf
+* You can download paramiko [here](https://github.com/paramiko/paramiko/)
+* This file connects to your SSH server and runs a command. Do not forget to set it up.
+* Paramiko supports authentication with keys as well. It is recommended to only use **SSH key autehntication** in a real engagement.
