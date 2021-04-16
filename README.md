@@ -37,7 +37,7 @@ $ cd myvirtualenvfolder
 1. Download the repo: `$ sudo git clone https://github.com/crake7/Network-Pen-Test-Tools.git`
 2. Check the **Tools** section below to learn about each tool.
 3. Note that some tools will need you to download additional libraries. 
-4. If the **Additional Info** is checked, check the **Useful Info** section below the table.
+4. If the **Useful Info** is checked, check the **Useful Info** section below the table.
 
 ## Tools
 
@@ -56,5 +56,9 @@ $ cd myvirtualenvfolder
 
 ## Useful Info
 
-Some programs may need you to be mindful of additional information. I have included some notes in this section
+Some programs may need you to be mindful of additional information. I have included some notes in this section:
+
+`netcat.py`:
+
+
 
