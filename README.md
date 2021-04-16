@@ -69,7 +69,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 #### `ssh_cmd.py`
 
 * You can download paramiko [here](https://github.com/paramiko/paramiko/)
-* This program connects to your SSH server and runs a command. Do not forget to set up your own SSH server.
+* This program connects to your SSH server and runs a command. Do not forget to set up your own SSH server!
 * Paramiko supports authentication with keys as well. It is recommended to only use **SSH key autehntication** in a real engagement.
 
 
