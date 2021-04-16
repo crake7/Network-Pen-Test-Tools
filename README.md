@@ -59,7 +59,7 @@ $ cd myvirtualenvfolder
 
 Some programs may need you to be mindful of additional information. I have included some notes in this section:
 
-`netcat.py` 
+#### `netcat.py` 
 
 * To run the script in **server** mode, you need to add the `-l` flag: `$ python3 netcat.py -t 10.0.0.2 -l -c`
 * To run the script in **client** mode, you only need the `-t` and `-p` flags: `$python netcat.py -t 10.0.0.2 -p 5555`
@@ -73,7 +73,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 * Paramiko supports authentication with keys as well. It is recommended to only use **SSH key autehntication** in a real engagement.
 
 
-`ssh_rcmd.py`
+#### `ssh_rcmd.py`
 
 * You can download paramiko [here](https://github.com/paramiko/paramiko/)
 * This program runs commands on Windows clients over SSH by sending the commands from an SSH server to an SSH client.
@@ -81,8 +81,8 @@ Some programs may need you to be mindful of additional information. I have inclu
 * Paramiko supports authentication with keys as well. It is recommended to only use **SSH key autehntication** in a real engagement.
 
 
-`ssh_server.py`
+#### `ssh_server.py`
 
 * You can download paramiko [here](https://github.com/paramiko/paramiko/)
 * Use this script with `ssh_rcmd.py`. 
-* 
+* The SSH key the server is using was originally downloaded from the paramiko repository. For convenience, I included it as a separate file: `test_rsa.key`. Type this filename when you are prompted to input *HOSTKEY file name: *. 
