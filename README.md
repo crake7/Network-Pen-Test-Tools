@@ -85,4 +85,4 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 * You can download paramiko [here](https://github.com/paramiko/paramiko/)
 * Use this script with `ssh_rcmd.py`. 
-* The SSH key the server is using was originally downloaded from the paramiko repository. For convenience, I included it as a separate file: `test_rsa.key`. Type this filename when you are prompted to input * HOSTKEY file name: *. 
+* The SSH key the server is using was originally downloaded from the paramiko repository. For convenience, I included it as a separate file: `test_rsa.key`. Type this filename when you are prompted to input *HOSTKEY file name:*. 
