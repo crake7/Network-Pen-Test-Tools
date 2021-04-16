@@ -65,6 +65,6 @@ Some programs may need you to be mindful of additional information. I have inclu
 * When you connect a client to a server, the script reads from your STDIN and will continue this way until it receives a end-of-file (EOF) marker. To send the EOF, press CTRL-D: `CTRL-D`. This is specially useful when you run a shell. 
 
 
-`ssh_cmd.py
+`ssh_cmd.py`
 
 * fsdfsdf
