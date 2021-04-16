@@ -50,7 +50,7 @@ $ cd myvirtualenvfolder
    | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | N/A ||
    | `netcat.py`| Simple client-server socket tool to run a shell, upload files and execute a command (Netcat-friendly). | N/A | ⚠️ |
    | `proxy.py`| TCP proxy to forward and modify traffic, or assess network-based software. | N/A ||
-   | `ssh_cmd.py`| Avoid dectection making a connection to an SSH server and run a single command. | Paramiko | ⚠️ |
+   | `ssh_cmd.py`| Avoid dectection making a connection to a SSH server and run a single command. | Paramiko | ⚠️ |
    | `ssh_rcmd.py`| Reverse SSH client. It receives commands from an SSH server. Useful for Windows clients. | Paramiko | ⚠️ |
    | `ssh_server.py`| Reverse SSH server. It sends commands to the SSH client(`ssh_rcmd.py`). Useful for Windows clients. | Paramiko | ⚠️ |
 
@@ -77,4 +77,12 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 * You can download paramiko [here](https://github.com/paramiko/paramiko/)
 * This program runs commands on Windows clients over SSH by sending the commands from an SSH server to an SSH client.
+* Use this script with `ssh_server.py`
 * Paramiko supports authentication with keys as well. It is recommended to only use **SSH key autehntication** in a real engagement.
+
+
+`ssh_server.py`
+
+* You can download paramiko [here](https://github.com/paramiko/paramiko/)
+* Use this script with `ssh_rcmd.py`. 
+* 
