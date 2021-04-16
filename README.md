@@ -37,7 +37,7 @@ $ cd myvirtualenvfolder
 1. Download the repo: `$ sudo git clone https://github.com/crake7/Network-Pen-Test-Tools.git`
 2. Check the **Tools** section below to learn about each tool.
 3. Note that some tools will need you to download additional libraries. 
-4. If the **Useful Info** is checked, go to the **Useful Info** section below the table.
+4. If the **Useful Info** is checked, read the **Useful Info** section below the table.
 
 ## Tools
 
