@@ -35,13 +35,14 @@ $ cd myvirtualenvfolder
 1. Download the repo: `sudo git clone https://github.com/crake7/Network-Pen-Test-Tools.git`
 2. Check the **Tools** section below to learn about each tool.
 3. Note that some tools will need you to download additional libraries. 
+4. 
 
 ## Tools
 
 * <h3>Networking Tools</h3>
 
-   | Program Name | Description| Libraries|
-   | -------- | --- | --- |
+   | Program Name | Description| Libraries| Additional Info |
+   | -------- | --- | --- | --- |
    | `tcp-client.py`| Basic TCP client to test for services, fuzz, or perform any number of other tasks. | N/A |
    | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. | N/A |
    | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | N/A |
