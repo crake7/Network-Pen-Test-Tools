@@ -5,6 +5,7 @@
   <a href="#Requirements">Requirements</a> •
   <a href="#How-to">How To</a> •
   <a href="#Tools">Tools</a> •
+  <a href="#Useful-Info">Useful Info</a> •
   <a href="#Credits">Credits</a>
 </p>
 
@@ -49,6 +50,10 @@ $ cd myvirtualenvfolder
    | `netcat.py`| Simple client-server socket tool to run a shell, upload files and execute a command (Netcat-friendly). | N/A |
    | `proxy.py`| TCP proxy to forward and modify traffic, or assess network-based software. | N/A |
    | `ssh_cmd.py`| Avoid dectection making a connection to an SSH server and run a single command. | Paramiko | 
+
+
+
+## Useful Info
 
 
 
