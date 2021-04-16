@@ -63,20 +63,20 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 * To run the script in **server** mode, you need to add the `-l` flag: `$ python3 netcat.py -t 10.0.0.2 -l -c`
 * To run the script in **client** mode, you only need the `-t` and `-p` flags: `$python netcat.py -t 10.0.0.2 -p 5555`
-* When you connect a client to a server, the script reads from your STDIN and will continue this way until it receives a end-of-file (EOF) marker. To send the EOF, press CTRL-D: `CTRL-D`. This is specially useful when you run a shell. 
+* When you connect a client to a server, the script reads from your STDIN and will continue this way until it receives a end-of-file (EOF) marker. To send the EOF, press `CTRL-D`. This is specially useful when you run a shell. 
 
 
 #### `ssh_cmd.py`
 
 * You can download paramiko [here](https://github.com/paramiko/paramiko/)
 * This program connects to your SSH server and runs a command. Do not forget to set up your own SSH server!
-* Paramiko supports authentication with keys as well. It is recommended to only use **SSH key autehntication** in a real engagement.
+* Paramiko supports authentication with keys as well. It is recommended to **only use SSH key autehntication** in a real engagement.
 
 
 #### `ssh_rcmd.py`
 
 * You can download paramiko [here](https://github.com/paramiko/paramiko/)
-* This program runs commands on Windows clients over SSH by sending the commands from an SSH server to an SSH client.
+* This program runs commands on Windows clients over SSH by receiving commands from an SSH server.
 * Use this script with `ssh_server.py`
 * Paramiko supports authentication with keys as well. It is recommended to only use **SSH key autehntication** in a real engagement.
 
