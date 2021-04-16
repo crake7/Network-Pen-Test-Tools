@@ -38,7 +38,7 @@ $ cd myvirtualenvfolder
 
 ## Tools
 
-* Networking Tools:
-  * TCP Client: Test for service, fuzz, request a resource. 
+* <h3>Networking Tools</h3>
+  * **TCP Client**: Test for service, fuzz, request a resource. 
   * 
 
