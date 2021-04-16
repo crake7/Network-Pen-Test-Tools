@@ -23,6 +23,7 @@ This repo is an addition to my previous repo [/Malware-Dev-and-Network-Exploitat
 $ sudo apt-get install python3-venv
 $ sudo mkdir myvirtualenvfolder
 $ cd myvirtualenvfolder
+
 ~/myvirtualenvfolder$ python3 -m venv virtualv
 ~/myvirtualenfolderv$ source virtualv/bin/activate
 (virtualv) ~/myvirtualenvfolder$ python
