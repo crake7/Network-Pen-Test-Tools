@@ -68,7 +68,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 #### `proxy.py`
 
-* The program has messed up the DNS configuration of some users. If you are having networking issues, verify your name server is correct: `$ cat /etc/resolv.conf`
+* The program has messed up the DNS configuration of some users. If you are having networking issues after running the script, verify your name server was not modified: `$ cat /etc/resolv.conf`
 
 
 #### `ssh_cmd.py`
