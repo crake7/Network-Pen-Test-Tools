@@ -34,3 +34,11 @@ $ cd myvirtualenvfolder
 
 1. Download the repo: `sudo git clone https://github.com/crake7/Network-Pen-Test-Tools.git`
 2. Check the **Tools** section below to learn about each tool.
+
+
+## Tools
+
+* Networking Tools:
+  * TCP Client: Test for service, fuzz, request a resource. 
+  * 
+
