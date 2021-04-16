@@ -39,6 +39,7 @@ $ cd myvirtualenvfolder
 ## Tools
 
 * <h3>Networking Tools</h3>
+
    | Program Name | Description|
    | --- | --- |
    | `tcp-client.py`| TCP client to test for services, fuzz, or perform any number of other tasks. | 
