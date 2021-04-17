@@ -50,7 +50,7 @@ $ cd myvirtualenvfolder
    | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | 
    | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. |
    
-* <h3>SSH Tools</h3>
+* [SSH Tools](/SSHTools)
    
    | Program Name | Description|
    | :--------: | :---: |
@@ -59,7 +59,7 @@ $ cd myvirtualenvfolder
    | `ssh_rcmd.py`| Reverse SSH client. It receives commands from an SSH server. Useful for Windows clients. | Paramiko | 
    | `ssh_server.py`| Reverse SSH server. It sends commands to the SSH client(`ssh_rcmd.py`). Useful for Windows clients. | 
 
-* <h3>Sniffers</h3>
+* [Sniffers](/Sniffers)
    
    | Program Name | Description|
    | :--------: | :---: |
