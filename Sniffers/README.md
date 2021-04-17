@@ -27,8 +27,8 @@ Some programs may need you to be mindful of additional information. I have inclu
 #### `sniffer_ip_header_decode.py`
 
 * This is a fully functional packet sniffer: it will read in the packets and parse their information. 
-* It uses the **struct** library, so access to raw sockets is somewhat limited. 
-* You can use this program to see the exact route each packet traverses. Very similar use to `traceroute`
 * Beware the functionality changes depending on your OS:
    * Windows - Allows you to see TCP, UDP, and ICMP traffic.
    * Linux   - Allows you to see ICMP packets.
+* It uses the **struct** library, so access to raw sockets is somewhat limited. 
+* You can use this program to see the exact route each packet traverses. Very similar use to `traceroute`
