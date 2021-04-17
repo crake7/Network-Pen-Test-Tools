@@ -6,10 +6,12 @@
 
    | Program Name | Description| Libraries| Useful Info |
    | :--------: | :---: | :---: | :---: | 
+   | `host-scanner.py`| Host scanner, compatible with Windows/Linux | struct | |
    | `sniffer.py`| Reads one raw packet, compatible with Windows/Linux. | | |
    | `ctypes-class.py`| IP class using **ctypes** to read a packet and parses the header info. | N/A | ⚠️ |
    | `struct-class.py`| IP class using **struct** to read a packet and parses the header info. | N/A | ⚠️ |
    | `sniffer_ip_header_decode.py`| IP Packet sniffer compatible with Windows/Linux. | struct | ⚠️ |
+   | `sniffer_with_icmp.py`| ICMP Packet sniffer compatible with Windows/Linux. | struct | ⚠️ |
 
 ## Useful Info
 
@@ -22,6 +24,13 @@ Some programs may need you to be mindful of additional information. I have inclu
 * Both libraries can be used to handle binary data into a data structure. 
 * *Ctypes* provides a bridge to C-based languages: this enables you to use C-compatible data types and call functions in shared libraries!
 * *Struct* converts between Python values and C structs as Python byte objects.
+
+
+#### `host-scanner.py`
+
+* The program works by sending UDP datagrams (with a custom message) to all IP's in a network. It takes advantage of the little overhead UDP provides, as well as the fact that most hosts reply back with a ICMP 3 if the port used is closed. Beware some hosts might behave differently!
+* This program provides host scanning functionality for Windows and Linux. 
+* Do not forget to change the `SUBNET` variable in the script.
 
 
 #### `sniffer_ip_header_decode.py`
