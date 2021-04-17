@@ -63,10 +63,10 @@ $ cd myvirtualenvfolder
    
    | Program Name | Description|
    | :--------: | :---: |
-   | `host-scanner.py`| UDP host discovery, compatible with Windows/Linux | 
+   | `host-scanner.py`| UDP host discovery (compatible with Windows/Linux) | 
    | `scapy-mailsniffer.py`| Sniffs traffic and steals email credentials (SMTP, POP3, IMAP). |
-   | `sniffer.py`| Reads a single raw packet, compatible with Windows/Linux. | 
-   | `sniffer_ip_header_decode.py`| IP Packet sniffer compatible with Windows/Linux. | 
+   | `sniffer.py`| Reads a single raw packet (compatible with Windows/Linux) | 
+   | `sniffer_ip_header_decode.py`| IP Packet sniffer (compatible with Windows/Linux) | 
 
 ## Credits
 
