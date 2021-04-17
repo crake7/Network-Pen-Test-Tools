@@ -27,7 +27,7 @@ $ cd myvirtualenvfolder
 ~/myvirtualenfolderv$ source virtualv/bin/activate
 (virtualv) ~/myvirtualenvfolder$ python
 ```
-* An IDE: **VS Code** suggested: `apt-get install code` or download it [here](https://code.visualstudio.com/download)
+* An IDE: **VS Code** (suggested) `apt-get install code` or download it [here](https://code.visualstudio.com/download)
 
 * Python 3.6 or higher. Installation depends on your OS, if you need help, click [here](https://realpython.com/installing-python/)
 
