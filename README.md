@@ -61,8 +61,8 @@ $ cd myvirtualenvfolder
 
 * <h3>Sniffers</h3>
    
-   | Program Name | Description| Libraries| Useful Info |
-   | :--------: | :---: | :---: | :---: | 
+   | Program Name | Description|
+   | :--------: | :---: |
    | `host-scanner.py`| UDP host discovery, compatible with Windows/Linux | 
    | `scapy-mailsniffer.py`| Sniffs traffic and steals email credentials (SMTP, POP3, IMAP). |
    | `sniffer.py`| Reads a single raw packet, compatible with Windows/Linux. | 
