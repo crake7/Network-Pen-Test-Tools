@@ -12,7 +12,7 @@ ___
 
 <h4>Are you looking for additional crafted tools to use during a penetration test?</h4>
 
-This repo is an addition to my previous repo [/Malware-Dev-and-Network-Exploitation-Tools](https://github.com/crake7/Malware-Dev-and-Network-Exploitation-Tools). It brings mostly **NEW tools** to use in a penetration test as well as **Burp Suite** extensions.
+This repo is an addition to my previous repo [/Malware-Dev-and-Network-Exploitation-Tools](https://github.com/crake7/Malware-Dev-and-Network-Exploitation-Tools). It brings mostly **NEW tools** to use in a penetration test, as well as **Burp Suite** extensions.
 
 
 ## Requirements
