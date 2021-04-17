@@ -12,9 +12,9 @@
    | `netcat.py`| Simple client-server socket tool to run a shell, upload files and execute a command (Netcat-friendly). | N/A | ⚠️ |
    | `proxy.py`| TCP proxy to forward and modify traffic, or assess network-based software. | N/A |⚠️|
    
-__
-### Useful Info
 
+### Useful Info
+____
 Some programs may need you to be mindful of additional information. I have included some notes in this section:
    
 #### `netcat.py` 
