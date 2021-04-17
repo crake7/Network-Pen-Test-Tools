@@ -39,7 +39,7 @@ $ cd myvirtualenvfolder
 
 ## Tools
 
-* <h3>[Networking Tools](/NetworkTools)</h3>
+* [Networking Tools](/NetworkTools)
 
    | Program Name | Description|
    | :--------: | :---: |
