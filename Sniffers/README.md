@@ -7,6 +7,7 @@
    | Program Name | Description| Libraries| Useful Info |
    | :--------: | :---: | :---: | :---: | 
    | `host-scanner.py`| Host scanner, compatible with Windows/Linux | struct | |
+   | `scapy-mailsniffer.py`| Steals Email Credentials with a sniffer. | scapy | |
    | `sniffer.py`| Reads one raw packet, compatible with Windows/Linux. | | |
    | `ctypes-class.py`| IP class using **ctypes** to read a packet and parses the header info. | N/A | ⚠️ |
    | `struct-class.py`| IP class using **struct** to read a packet and parses the header info. | N/A | ⚠️ |
@@ -17,13 +18,12 @@
 
 Some programs may need you to be mindful of additional information. I have included some notes in this section:
    
-#### `ctypes-class.py` vs `struct-class.py`
 
-* Be advice that using the library **scapy** is the easiest option for packet manipulation. 
-* The two classes were created only to understand their differences.
-* Both libraries can be used to handle binary data into a data structure. 
-* *Ctypes* provides a bridge to C-based languages: this enables you to use C-compatible data types and call functions in shared libraries!
-* *Struct* converts between Python values and C structs as Python byte objects.
+#### `scapy-mailsniffer.py`
+
+* **scapy** is a wonderful library that makes packet capturing easy. Use it over **ctypes** and **struct**. 
+* This program sniffs packets and captures SMTP, POP3, and IMAP credentials. It filters the packets by using a Berkeley Packet Filter (BPF) filter. Use it with the `-m` or `--mail` flag.
+* It has functionality to display packet contents and dissect protocol information. Use it with the `-s` or `--show` flag. 
 
 
 #### `host-scanner.py`
@@ -41,3 +41,12 @@ Some programs may need you to be mindful of additional information. I have inclu
    * Windows - Allows you to see TCP, UDP, and ICMP traffic.
    * Linux   - Allows you to see ICMP packets.
 * You can use this program to see the exact route each packet traverses. Very similar use to `traceroute`
+
+
+#### `ctypes-class.py` vs `struct-class.py`
+
+* Be advice that using the library **scapy** is the easiest option for packet manipulation. 
+* The two classes were created only to understand their differences.
+* Both libraries can be used to handle binary data into a data structure. 
+* *Ctypes* provides a bridge to C-based languages: this enables you to use C-compatible data types and call functions in shared libraries!
+* *Struct* converts between Python values and C structs as Python byte objects.
