@@ -28,7 +28,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 #### `host-scanner.py`
 
-* The program works by sending UDP datagrams (with a custom message) to all IP's in a network. It takes advantage of the little overhead UDP provides, as well as the fact that most hosts reply back with a ICMP 3 if the port used is closed. Beware some hosts might behave differently!
+* The program works by sending UDP datagrams (with a custom message) to all IP's in a network. It takes advantage of the little overhead UDP provides, as well as the fact that most hosts reply back with a ICMP 3 if the probed port is closed. Beware some hosts might behave differently!
 * This program provides host scanning functionality for Windows and Linux. 
 * Do not forget to change the `SUBNET` variable in the script.
 
