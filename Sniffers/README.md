@@ -6,11 +6,11 @@
 
    | Program Name | Description| Libraries| Useful Info |
    | :--------: | :---: | :---: | :---: | 
-   | `host-scanner.py`| Host scanner, compatible with Windows/Linux | struct | |
-   | `scapy-mailsniffer.py`| Steals Email Credentials with a sniffer. | scapy | |
-   | `sniffer.py`| Reads one raw packet, compatible with Windows/Linux. | | |
-   | `ctypes-class.py`| IP class using **ctypes** to read a packet and parses the header info. | N/A | ⚠️ |
-   | `struct-class.py`| IP class using **struct** to read a packet and parses the header info. | N/A | ⚠️ |
+   | `host-scanner.py`| Host scanner, compatible with Windows/Linux | struct | ⚠️ |
+   | `scapy-mailsniffer.py`| Steals Email Credentials with a sniffer. | scapy |⚠️ |
+   | `sniffer.py`| Reads a single raw packet, compatible with Windows/Linux. | | |
+   | `ctypes-class.py`| IP class using **ctypes** to read a packet and parses the header info. | N/A | |
+   | `struct-class.py`| IP class using **struct** to read a packet and parses the header info. | N/A | |
    | `sniffer_ip_header_decode.py`| IP Packet sniffer compatible with Windows/Linux. | struct | ⚠️ |
    | `sniffer_with_icmp.py`| ICMP Packet sniffer compatible with Windows/Linux. | struct | ⚠️ |
 
@@ -19,19 +19,18 @@
 Some programs may need you to be mindful of additional information. I have included some notes in this section:
    
 
+#### `host-scanner.py`
+
+* The program works by sending UDP datagrams (with a custom message) to all IP's in a network. It takes advantage of the little overhead UDP provides, as well as the fact that most hosts reply back with a ICMP 3 if the probed port is closed. **Beware some hosts might behave differently!**
+* This program provides host scanning functionality for Windows and Linux. 
+* Do not forget to change the `SUBNET` variable in the script.
+
+
 #### `scapy-mailsniffer.py`
 
 * **scapy** is a wonderful library that makes packet capturing easy. Use it over **ctypes** and **struct**. 
 * This program sniffs packets and captures SMTP, POP3, and IMAP credentials. It filters the packets by using a Berkeley Packet Filter (BPF) filter. Use it with the `-m` or `--mail` flag.
 * It has functionality to display packet contents and dissect protocol information. Use it with the `-s` or `--show` flag. 
-
-
-#### `host-scanner.py`
-
-* The program works by sending UDP datagrams (with a custom message) to all IP's in a network. It takes advantage of the little overhead UDP provides, as well as the fact that most hosts reply back with a ICMP 3 if the probed port is closed. Beware some hosts might behave differently!
-* This program provides host scanning functionality for Windows and Linux. 
-* Do not forget to change the `SUBNET` variable in the script.
-
 
 #### `sniffer_ip_header_decode.py`
 
