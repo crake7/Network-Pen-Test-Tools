@@ -17,6 +17,11 @@
 
 Some programs may need you to be mindful of additional information. I have included some notes in this section:
    
+#### `arper.py`
+
+* Before running the script, set your machine to forward packets: `$echo 1 > /proc/sys/net/ipv4/ip_forward` 
+It is not polite to cut the target's internet connection ;)
+
 #### `netcat.py` 
 
 * To run the script in **server** mode, you need to add the `-l` flag: `$ python3 netcat.py -t 10.0.0.2 -l -c`
