@@ -9,7 +9,7 @@
    | `sniffer.py`| Reads one raw packet, compatible with Windows/Linux. | | |
    | `ctypes-class.py`| IP class using **ctypes** to read a packet and parses the header info. | N/A | ⚠️ |
    | `struct-class.py`| IP class using **struct** to read a packet and parses the header info. | N/A | ⚠️ |
-   | `sniffer_ip_header_decode.py`| Packet sniffer compatible with Windows/Linux. | struct | ⚠️ |
+   | `sniffer_ip_header_decode.py`| IP Packet sniffer compatible with Windows/Linux. | struct | ⚠️ |
 
 ## Useful Info
 
@@ -26,7 +26,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 #### `sniffer_ip_header_decode.py`
 
-* This is a fully functional packet sniffer: it will read in the packets and parse their information. 
+* This is a limited packet sniffer: it will only read in the packets and parse their IP information. 
 * It uses the **struct** library, so access to raw sockets is somewhat limited. 
 * Beware the functionality changes depending on your OS:
    * Windows - Allows you to see TCP, UDP, and ICMP traffic.
