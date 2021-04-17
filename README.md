@@ -5,7 +5,6 @@
   <a href="#Requirements">Requirements</a> •
   <a href="#How-to">How To</a> •
   <a href="#Tools">Tools</a> •
-  <a href="#Useful-Info">Useful Info</a> •
   <a href="#Credits">Credits</a>
 </p>
 
