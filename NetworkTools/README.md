@@ -7,12 +7,11 @@
    | Program Name | Description| Libraries| Useful Info |
    | :--------: | :---: | :---: | :---: | 
    | `arper.py`| Your good ol' ARP cache poisoner with host discovery functionality. | Scapy | |
-   | `tcp-client.py`| Basic TCP client to test for services, fuzz, or perform any number of other tasks. | N/A | |
-   | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. | N/A ||
-   | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | N/A ||
    | `netcat.py`| Simple client-server socket tool to run a shell, upload files and execute a command (Netcat-friendly). | N/A | ⚠️ |
    | `proxy.py`| TCP proxy to forward and modify traffic, or assess network-based software. | N/A |⚠️|
-   
+   | `tcp-client.py`| Basic TCP client to test for services, fuzz, or perform any number of other tasks. | N/A | |
+   | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | N/A ||
+   | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. | N/A ||
 
 ## Useful Info
 
