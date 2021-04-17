@@ -20,7 +20,8 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 #### `rforward.py`
 
-* This script is useful to access a blocked resource in a network by connecting to your own SSH server from a SSH client: `$ python3 rforward.py <SSHserverIp> -p <port> -r <BlockIp>:<port> --user=<username> --password`
+* This script is useful to access a blocked resource in a network by connecting to your own SSH server from a SSH client:
+`$ python3 rforward.py <SSHserverIp> -p <port> -r <BlockIp>:<port> --user=<username> --password`
 
 #### `ssh_cmd.py`
 
