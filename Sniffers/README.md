@@ -30,7 +30,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 * **scapy** is a wonderful library that makes packet capturing easy. Use it over **ctypes** and **struct**. 
 * This program sniffs packets and captures SMTP, POP3, and IMAP credentials. It filters the packets by using a Berkeley Packet Filter (BPF) filter. Use it with the `-m` or `--mail` flag.
-* It has functionality to display packet contents and dissect protocol information. Use it with the `-s` or `--show` flag. 
+* It also has functionality to display packet contents and dissect protocol information. Use it with the `-s` or `--show` flag. 
 
 #### `sniffer_ip_header_decode.py`
 
