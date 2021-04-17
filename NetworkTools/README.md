@@ -1,7 +1,7 @@
 ## NetworkTools
 
-* Note that some tools will need you to download additional libraries.
-* If the Useful Info is checked, read the Useful Info section below the table.
+* Note that some tools will need you to download **additional libraries**.
+* If the **Useful Info** is checked, read the section below the table.
 
 
 
