@@ -14,7 +14,7 @@
    
 
 
-### Useful Info
+## Useful Info
 
 Some programs may need you to be mindful of additional information. I have included some notes in this section:
    
