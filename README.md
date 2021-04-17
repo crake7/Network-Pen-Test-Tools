@@ -59,9 +59,14 @@ $ cd myvirtualenvfolder
    | `ssh_rcmd.py`| Reverse SSH client. It receives commands from an SSH server. Useful for Windows clients. | Paramiko | 
    | `ssh_server.py`| Reverse SSH server. It sends commands to the SSH client(`ssh_rcmd.py`). Useful for Windows clients. | 
 
-
-
-
+* <h3>Sniffers</h3>
+   
+   | Program Name | Description| Libraries| Useful Info |
+   | :--------: | :---: | :---: | :---: | 
+   | `host-scanner.py`| UDP host discovery, compatible with Windows/Linux | 
+   | `scapy-mailsniffer.py`| Sniffs traffic and steals email credentials (SMTP, POP3, IMAP). |
+   | `sniffer.py`| Reads a single raw packet, compatible with Windows/Linux. | 
+   | `sniffer_ip_header_decode.py`| IP Packet sniffer compatible with Windows/Linux. | 
 
 ## Credits
 
