@@ -92,3 +92,11 @@ Some programs may need you to be mindful of additional information. I have inclu
 * You can download paramiko [here](https://github.com/paramiko/paramiko/)
 * Use this script with `ssh_rcmd.py`. 
 * The SSH key the server is using was originally downloaded from the paramiko repository. For convenience, I included it as a separate file: `test_rsa.key`. Type this filename when you are prompted to input *HOSTKEY file name:* or use your own key. 
+
+
+
+## Credits
+
+This repo was created while reading the amazing book: [Black Hat Python 2](https://www.amazon.com/Black-Hat-Python-2nd-Programming/dp/1718501129/ref=sr_1_3?dchild=1&keywords=black+hat+python+2&qid=1618619206&sr=8-3) by Justin Seitz and Tim Arnold. 
+
+Writers and contributors take NO responsibility and/or liability for how you choose to use any of the source code available here. By using any of the files available in this repository, you understand that you are AGREEING TO USE AT YOUR OWN RISK. Once again, ALL files available here are for EDUCATION and/or RESEARCH purposes ONLY.
