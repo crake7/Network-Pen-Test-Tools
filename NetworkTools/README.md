@@ -20,7 +20,8 @@ Some programs may need you to be mindful of additional information. I have inclu
 #### `arper.py`
 
 * Before running the script, set your machine to forward packets: `$echo 1 > /proc/sys/net/ipv4/ip_forward` 
-It is not polite to cut the target's internet connection ;)
+It is not polite to cut your target's internet connection ;)
+* I suggest flushing your DNS after you have finished: `$ iptables --flush`
 
 #### `netcat.py` 
 
