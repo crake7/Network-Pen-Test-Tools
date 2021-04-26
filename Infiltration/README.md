@@ -1,4 +1,4 @@
-## Infiltration
+## Exfiltration
 
 * Note that some tools will need you to download **additional libraries**.
 * If the **Useful Info** is checked, read the section below the table.
@@ -6,7 +6,7 @@
 
    | Program Name | Description| Libraries| Useful Info |
    | :--------: | :---: | :---: | :---: | 
-   | `cryptor.py`| Encrypts and decrypts data using symmetric and assymetric keys.  | Pycryptodomex |⚠ |
+   | `cryptor.py`| Encrypts and decrypts data using symmetric and assymetric encryption.  | Pycryptodomex |⚠ |
    | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | pycryptodomex | ⚠ |
 
 
