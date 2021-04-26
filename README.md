@@ -5,7 +5,6 @@
   <a href="#Requirements">Requirements</a> •
   <a href="#How-to">How To</a> •
   <a href="#Tools">Tools</a> •
-  <a href="#Useful-Info">Useful Info</a> •
   <a href="#Credits">Credits</a>
 </p>
 
@@ -13,12 +12,12 @@ ___
 
 <h4>Are you looking for additional crafted tools to use during a penetration test?</h4>
 
-This repo is an addition to my previous repo [/Malware-Dev-and-Network-Exploitation-Tools](https://github.com/crake7/Malware-Dev-and-Network-Exploitation-Tools). It brings mostly **NEW tools** to use in a penetration test as well as **Burp Suite** extensions.
+This repo is an addition to my previous repo [/Malware-Dev-and-Network-Exploitation-Tools](https://github.com/crake7/Malware-Dev-and-Network-Exploitation-Tools). It brings mostly **NEW tools** to use in a penetration test, as well as **Burp Suite** extensions.
 
 
 ## Requirements
 
-* It is recommended to use the tools in this repository using *virtual environments*. This keeps your projects and its dependencies separate from your main Python installation.
+* It is recommended to use the tools in this repository with *virtual environments*. This keeps your projects and its dependencies separate from your main Python installation.
 ```
 $ sudo apt-get install python3-venv
 $ sudo mkdir myvirtualenvfolder
@@ -28,72 +27,53 @@ $ cd myvirtualenvfolder
 ~/myvirtualenfolderv$ source virtualv/bin/activate
 (virtualv) ~/myvirtualenvfolder$ python
 ```
-* An IDE: **VS Code** suggested: `apt-get install code` or download it [here](https://code.visualstudio.com/download)
+* An IDE: **VS Code** (suggested) `apt-get install code` or download it [here](https://code.visualstudio.com/download)
 
 * Python 3.6 or higher. Installation depends on your OS, if you need help, click [here](https://realpython.com/installing-python/)
 
 ## How-to
 
 1. Download the repo: `$ sudo git clone https://github.com/crake7/Network-Pen-Test-Tools.git`
-2. Check the **Tools** section below to learn about each tool.
-3. Note that some tools will need you to download additional libraries. 
-4. If the **Useful Info** is checked, read the **Useful Info** section below the table.
+2. Have a look at the **Tools** section below to check the programs in each folder.
+3. Each folder has a **README.md** file that provides additional information for each tool. 
 
 ## Tools
 
-* <h3>Networking Tools</h3>
+* [Networking Tools](/NetworkTools)
 
-   | Program Name | Description| Libraries| Useful Info |
-   | :--------: | :---: | :---: | :---: | 
-   | `tcp-client.py`| Basic TCP client to test for services, fuzz, or perform any number of other tasks. | N/A | |
-   | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. | N/A ||
-   | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | N/A ||
-   | `netcat.py`| Simple client-server socket tool to run a shell, upload files and execute a command (Netcat-friendly). | N/A | ⚠️ |
-   | `proxy.py`| TCP proxy to forward and modify traffic, or assess network-based software. | N/A |⚠️|
-   | `ssh_cmd.py`| Avoid dectection making a connection to a SSH server and run a single command. | Paramiko | ⚠️ |
-   | `ssh_rcmd.py`| Reverse SSH client. It receives commands from an SSH server. Useful for Windows clients. | Paramiko | ⚠️ |
-   | `ssh_server.py`| Reverse SSH server. It sends commands to the SSH client(`ssh_rcmd.py`). Useful for Windows clients. | Paramiko | ⚠️ |
-   | `rforward.py`| Reverse SSH tunneling using Paramiko's demo file with slight modifications. | Paramiko ||
+   | Program Name | Description|
+   | :--------: | :---: |
+   | `arper.py`| Your good ol' ARP cache poisoner with host discovery functionality. |
+   | `netcat.py`| Simple client-server socket tool to run a shell, upload files and execute a command (Netcat-friendly). |
+   | `proxy.py`| TCP proxy to forward and modify traffic, or assess network-based software. |
+   | `tcp-client.py`| Basic TCP client to test for services, fuzz, or perform any number of other tasks. |
+   | `tcp-server.py`| TCP server to write command shells or crafting a proxy. | 
+   | `udp-client.py`| Basic UDP client to test for services, fuzz, or perform any number of other tasks. |
+   
+* [SSH Tools](/SSHTools)
+   
+   | Program Name | Description|
+   | :--------: | :---: |
+   | `rforward.py`| Reverse SSH tunneling using Paramiko's demo file with slight modifications. |
+   | `ssh_cmd.py`| Avoid dectection making a connection to a SSH server and run a single command. |
+   | `ssh_rcmd.py`| Reverse SSH client. It receives commands from an SSH server. Useful for Windows clients. | Paramiko | 
+   | `ssh_server.py`| Reverse SSH server. It sends commands to the SSH client(`ssh_rcmd.py`). Useful for Windows clients. | 
 
+* [Sniffers](/Sniffers)
+   
+   | Program Name | Description|
+   | :--------: | :---: |
+   | `host-scanner.py`| UDP host discovery (compatible with Windows/Linux) | 
+   | `scapy-mailsniffer.py`| Sniffs traffic and steals email credentials (SMTP, POP3, IMAP). |
+   | `sniffer.py`| Reads a single raw packet (compatible with Windows/Linux) | 
+   | `sniffer_ip_header_decode.py`| IP Packet sniffer (compatible with Windows/Linux) | 
 
-## Useful Info
+* [Infiltration](/Infiltration)
 
-Some programs may need you to be mindful of additional information. I have included some notes in this section:
-
-#### `netcat.py` 
-
-* To run the script in **server** mode, you need to add the `-l` flag: `$ python3 netcat.py -t 10.0.0.2 -l -c`
-* To run the script in **client** mode, you only need the `-t` and `-p` flags: `$python netcat.py -t 10.0.0.2 -p 5555`
-* When you connect a client to a server, the script reads from your STDIN and will continue this way until it receives a end-of-file (EOF) marker. To send the EOF, press `CTRL-D`. This is specially useful when you run a shell. 
-
-
-#### `proxy.py`
-
-* The program has messed up the DNS configuration of some users. If you are having networking issues after running the script, verify your name server was not modified: `$ cat /etc/resolv.conf`
-
-
-#### `ssh_cmd.py`
-
-* You can download paramiko [here](https://github.com/paramiko/paramiko/)
-* This program connects to your SSH server and runs a command. Do not forget to set up your own SSH server!
-* Paramiko supports authentication with keys as well. It is recommended to **only use SSH key autehntication** in a real engagement.
-
-
-#### `ssh_rcmd.py`
-
-* You can download paramiko [here](https://github.com/paramiko/paramiko/)
-* This program runs commands on Windows clients over SSH by receiving commands from an SSH server.
-* Use this script with `ssh_server.py`
-* Paramiko supports authentication with keys as well. It is recommended to only use **SSH key autehntication** in a real engagement.
-
-
-#### `ssh_server.py`
-
-* You can download paramiko [here](https://github.com/paramiko/paramiko/)
-* Use this script with `ssh_rcmd.py`. 
-* The SSH key the server is using was originally downloaded from the paramiko repository. For convenience, I included it as a separate file: `test_rsa.key`. Type this filename when you are prompted to input *HOSTKEY file name:* or use your own key. 
-
-
+   | Program Name | Description|
+   | :--------: | :---: |
+   | `cryptor.py`| Encrypts and decrypts data using symmetric and assymetric keys. | 
+   | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | 
 
 ## Credits
 
