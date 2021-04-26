@@ -26,5 +26,5 @@ Some programs may need you to be mindful of additional information. I have inclu
 * This program uses hybrid encryption: You can read `cryptor.py` to have a high-level overview of its functionality.
 * <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
 * The program will encrypt the data and will email it to an account depending on your OS:
-         * It will use **Outlook** i you are using Windows.
-         * It will use **Google's SMTP** if you are using anything else.
+  * It will use *Outlook* if you are using Windows.
+  * It will use *Google's SMTP* if you are using anything else.
