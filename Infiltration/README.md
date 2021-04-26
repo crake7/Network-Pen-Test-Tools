@@ -28,3 +28,4 @@ Some programs may need you to be mindful of additional information. I have inclu
 * The program will encrypt the data you provide, and will email it to an account depending on your OS:
   * It will use *Outlook* if you are using Windows.
   * It will use *Google's SMTP* if you are using anything else.
+* Make sure you Enable **Less Secure Apps**. Confused? Info [here](https://www.slipstick.com/outlook/outlook-gmails-secure-apps-setting/)
