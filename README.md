@@ -68,7 +68,7 @@ $ cd myvirtualenvfolder
    | `sniffer.py`| Reads a single raw packet (compatible with Windows/Linux) | 
    | `sniffer_ip_header_decode.py`| IP Packet sniffer (compatible with Windows/Linux) | 
 
-* [Infiltration](/Infiltration)
+* [Exfiltration](/Exfiltration)
 
    | Program Name | Description|
    | :--------: | :---: |
