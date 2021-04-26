@@ -6,7 +6,7 @@
 
    | Program Name | Description| Libraries| Useful Info |
    | :--------: | :---: | :---: | :---: | 
-   | `cryptor.py`| Encrypts and decrypts data using symmetric and assymetric keys.  | Pycryptodomex |⚠ |
+   | `cryptor.py`| Encrypts and decrypts data using symmetric and assymetric encryption.  | Pycryptodomex |⚠ |
    | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | pycryptodomex | ⚠ |
 
 
@@ -19,7 +19,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 * This program will begin by creating a public/private RSA key pair to encrypt/decrypt your AES key and the ciphertext.
 * <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
 * The program will use AES to encrypt the data you want to exfiltrate.
-* The encrypted data will be base64 encoded when sent. 
+* The encrypted data will be sent base64-encoded.
 
 #### `email_exfil.py`
 
