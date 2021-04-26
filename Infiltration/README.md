@@ -6,7 +6,7 @@
 
    | Program Name | Description| Libraries| Useful Info |
    | :--------: | :---: | :---: | :---: | 
-   | `cryptor.py`| Your good ol' ARP cache poisoner with host discovery functionality. | Pycryptodomex |⚠ |
+   | `cryptor.py`| Encrypts and decrypts data using symmetric and assymetric keys.  | Pycryptodomex |⚠ |
    | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | pycryptodomex | ⚠ |
 
 
@@ -16,11 +16,15 @@ Some programs may need you to be mindful of additional information. I have inclu
    
 #### `cryptor.py`
 
-* <strong> Do not forget to add the filenames to </strong>`.gitignore`
-
+* This program will begin by creating a public/private RSA key pair to encrypt/decrypt your AES key and the ciphertext.
+* <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
+* The program will use AES to encrypt the data you want to exfiltrate.
+* The encrypted data will be base64 encoded when sent. 
 
 #### `email_exfil.py`
 
-* To run the script in **server** mode, you need to add the `-l` flag: `$ python3 netcat.py -t 10.0.0.2 -l -c`
-* To run the script in **client** mode, you only need the `-t` and `-p` flags: `$python netcat.py -t 10.0.0.2 -p 5555`
-* When you connect a client to a server, the script reads from your STDIN and will continue this way until it receives a end-of-file (EOF) marker. To send the EOF, press `CTRL-D`. This is specially useful when you run a shell. 
+* This program uses hybrid encryption: You can read `cryptor.py` to have a high-level overview of its functionality.
+* <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
+* The program will encrypt the data and will email it to an account depending on your OS:
+         * It will use **Outlook** i you are using Windows.
+         * It will use **Google's SMTP** if you are using anything else.
