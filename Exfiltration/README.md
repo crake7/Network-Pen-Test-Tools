@@ -40,7 +40,7 @@ Some programs may need you to be mindful of additional information. I have inclu
   * It will * open a socket and send the file to port 10000* if you are using *Windows*.
   * It will use *FTP* if you are using anything else.
 
-Set up for FTP Server correctly, [help](https://likegeeks.com/ftp-server-linux/): 
+* Set up for FTP Server correctly, [help](https://likegeeks.com/ftp-server-linux/): 
    * Allow Anonymous FTP access
    * Create the **pub/** directory 
    * Allow Anonymous users to upload files.
