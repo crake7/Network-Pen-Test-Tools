@@ -39,7 +39,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 * The program will encrypt the data from a file, dump it into a new file in the **/tmp** directory, and will send it via file transfer depending on your OS:
   * It will *open a socket and send the file to port 10000* if you are using *Windows*.
   * It will use *FTP* if you are using anything else.
-* Set up your FTP Server correctly, [help](https://likegeeks.com/ftp-server-linux/): 
+* FTP Server checlist [(help)](https://likegeeks.com/ftp-server-linux/): 
    * Allow Anonymous FTP access
    * Create the **pub/** directory 
    * Allow Anonymous users to upload files.
