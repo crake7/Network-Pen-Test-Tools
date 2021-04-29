@@ -54,4 +54,5 @@ Some programs may need you to be mindful of additional information. I have inclu
 * You need to sign up to [Pastebin](https://pastebin.com/signup) to use this program!!
 * This program logs in your **Pastebin** account and posts your encrypted data there. It will do it differently based on your OS:
    * It will *create an instance of a Internet Explorer COM object and use the DOM* if you are using *Windows*.
-   * It will use the *Pastebin [API](https://pastebin.com/doc_api)* for anything else.
+   * It will use the *Pastebin [API](https://pastebin.com/doc_api)* if you are using anything else.
+
