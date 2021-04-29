@@ -3,8 +3,10 @@ from Cryptodome.PublicKey import RSA
 from Cryptodome.Random import get_random_bytes
 from io import BytesIO
 
+import argparse
 import base64
 import os
+import textwrap
 import zlib
 
 def RSA_generate():
@@ -48,9 +50,9 @@ def encrypt(plaintext):
     encrypted   = base64.encodebytes(msg_payload)
     return encrypted
 
-def decrypt(encrypted):
+def decrypt(encrypted_data):
     ''' Decrypts the payload and returns the plaintext.'''
-    encrypted_bytes = BytesIO(base64.decodebytes(encrypted))
+    encrypted_bytes = BytesIO(base64.decodebytes(encrypted_data))
     RSA_cipher, keysize_in_bytes = get_RSA_cipher('pri')
 
     # Note the session key is derived from the key size of the private key.
@@ -68,11 +70,37 @@ def decrypt(encrypted):
     plaintext   = zlib.decompress(decrypted)
     return plaintext
 
+def encrypt2file(filename, plaintext):
+    with open(f'{filename}.txt', 'wb') as f:
+        f.write(encrypt(plaintext))
+
+def decrpytfromfile(filename):
+    with open(filename, 'rb') as f:
+        contents = f.read()
+    print(decrypt(contents))
+    
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Encryptor/Decryptor Tool',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog = textwrap.dedent('''Example:
+            python3 cryptor.py -e # Encrypt
+            python3 cryptor.py -d # Decrypt
+            '''))
+    parser.add_argument('-e', '--encrypt', action='store_true', help='Encrypt plaintext and dump contents into a new file')
+    parser.add_argument('-d', '--decrypt', action='store_true', help='Decrypt ciphertext from a file')
+    args = parser.parse_args()
 
     if (not os.path.isfile('key.pub')) and (not os.path.isfile('key.pri')):
+        print("[!] It looks like you do not have an RSA key pair. Don't you worry child, I will generate a pair for ya.")
         RSA_generate()
-    
+
+    if args.encrypt:
+        filename  = input("Enter the filename of your new ciphertext: ")
+        plaintext = input("Enter the text you want to encrypt, hun: ").encode()
+        encrypt2file(filename, plaintext)
+
+    elif args.decrypt:
+        filename = input("Enter the filename you want to decrypt, hun: ")
+        decrpytfromfile(filename)
     else:
-        plaintext = b'Testing functionality.'
-        print(decrypt(encrypt(plaintext))) 
+        print("There must have been a problem, try again.")
