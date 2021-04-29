@@ -71,7 +71,7 @@ $ cd myvirtualenvfolder
 
    | Program Name | Description|
    | :--------: | :---: |
-   | `cryptor.py`| Encrypts and decrypts data using symmetric and assymetric keys. | 
+   | `cryptor.py`| Encrypts data and saves it into a file / Decrypts data from a file. | 
    | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | 
    | `transmit_exfil.py`| Encrypts a file and sends it out via file transfer (compatible with Windows/Linux) | 
 
