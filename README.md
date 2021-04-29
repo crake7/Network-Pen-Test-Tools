@@ -75,6 +75,7 @@ $ cd myvirtualenvfolder
    | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | 
    | `transmit_exfil.py`| Encrypts a file and sends it out via file transfer (compatible with Windows/Linux) | 
    | `paste_exfil.py`| Encrypts data and posts it in Pastebin (compatible with Windows/Linux) |
+   | `exfil.py`| Encrypts, decrypts and exilfrates data via email, file transfer or Pastebin. (compatible with Windows/Linux)  |
    
 ## Credits
 
