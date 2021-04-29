@@ -10,17 +10,20 @@
    | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | pycryptodomex | ⚠ |
    | `transmit_exfil.py`| Encrypts a file and sends it out via file transfer (compatible with Windows/Linux) | Pycryptodomex |⚠ |
    | `paste_exfil.py`| Encrypts data and posts it in Pastebin (compatible with Windows/Linux) | Pycryptodomex |⚠ |
+   | `exfil.py`| Encrypts, decrypts and exilfrates data via email, file transfer or Pastebin. (compatible with Windows/Linux)  | Pycryptodomex |⚠ |
+
 
 
 
 ## Useful Info
 
 Some programs may need you to be mindful of additional information. I have included some notes in this section:
+
+* <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
    
 #### `cryptor.py`
 
 * This program will begin by creating a public/private RSA key pair to encrypt/decrypt your AES key and the ciphertext.
-* <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
 * The program will use AES to encrypt the data you want to exfiltrate and save it on a file.
 * The encrypted data will be saved base64-encoded.
 * You can also decrypt the data you previously saved by providing its filename. 
@@ -28,7 +31,6 @@ Some programs may need you to be mindful of additional information. I have inclu
 #### `email_exfil.py`
 
 * This program uses hybrid encryption: You can read `cryptor.py` to have a high-level overview of its functionality.
-* <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
 * The program will encrypt the data you provide, and will email it to an account depending on your OS:
   * It will use *Outlook* if you are using Windows.
   * It will use *Google's SMTP* if you are using anything else.
@@ -38,7 +40,6 @@ Some programs may need you to be mindful of additional information. I have inclu
 #### `transmit_exfil.py`
 
 * This program uses hybrid encryption: You can read `cryptor.py` to have a high-level overview of its functionality.
-* <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
 * The program will encrypt the data from a file, dump it into a new file in the **/tmp** directory, and will send it via file transfer depending on your OS:
   * It will *open a socket and send the file to port 10000* if you are using *Windows*.
   * It will use *FTP* if you are using anything else.
@@ -50,9 +51,12 @@ Some programs may need you to be mindful of additional information. I have inclu
 #### `paste_exfil.py`
 
 * This program uses hybrid encryption: You can read `cryptor.py` to have a high-level overview of its functionality.
-* <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
 * You need to sign up to [Pastebin](https://pastebin.com/signup) to use this program!!
 * This program logs in your **Pastebin** account and posts your encrypted data there. It will do it differently based on your OS:
    * It will *create an instance of a Internet Explorer COM object and use the DOM* if you are using *Windows*.
    * It will use the *Pastebin [API](https://pastebin.com/doc_api)* if you are using anything else.
 
+#### `cryptor.py`
+
+* This tool is a combination of all the tools in this repository. 
+* I am still debugging it, it will be ready TOMORROW :)
