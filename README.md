@@ -74,7 +74,8 @@ $ cd myvirtualenvfolder
    | `cryptor.py`| Encrypts data and saves it into a file / Decrypts data from a file. | 
    | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | 
    | `transmit_exfil.py`| Encrypts a file and sends it out via file transfer (compatible with Windows/Linux) | 
-
+   | `paste_exfil.py`| Encrypts data and posts it in Pastebin (compatible with Windows/Linux) |
+   
 ## Credits
 
 This repo was created while reading the amazing book: [Black Hat Python 2](https://www.amazon.com/Black-Hat-Python-2nd-Programming/dp/1718501129/ref=sr_1_3?dchild=1&keywords=black+hat+python+2&qid=1618619206&sr=8-3) by Justin Seitz and Tim Arnold. 
