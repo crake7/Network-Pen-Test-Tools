@@ -23,7 +23,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 * <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
 * The program will use AES to encrypt the data you want to exfiltrate and save it on a file.
 * The encrypted data will be saved base64-encoded.
-* You can also decrypt the data you previously saved by providing the filename. 
+* You can also decrypt the data you previously saved by providing its filename. 
 
 #### `email_exfil.py`
 
