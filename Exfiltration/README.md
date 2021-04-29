@@ -6,7 +6,7 @@
 
    | Program Name | Description| Libraries| Useful Info |
    | :--------: | :---: | :---: | :---: | 
-   | `cryptor.py`| Encrypts and decrypts data using symmetric and assymetric encryption.  | Pycryptodomex |⚠ |
+   | `cryptor.py`|  Encrypts data and saves it into a file / Decrypts data from a file.   | Pycryptodomex |⚠ |
    | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | pycryptodomex | ⚠ |
    | `transmit_exfil.py`| Encrypts a file and sends it out via file transfer (compatible with Windows/Linux) | Pycryptodomex |⚠ |
    | `paste_exfil.py`| Encrypts data and posts it in Pastebin (compatible with Windows/Linux) | Pycryptodomex |⚠ |
