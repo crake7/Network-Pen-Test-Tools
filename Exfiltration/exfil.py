@@ -318,7 +318,7 @@ if __name__ == '__main__':
         plaintext = input("Enter the text you want to encrypt, hun: ").encode()
         with open(f'{filename}-encrypted.txt', 'wb') as f:
             f.write(encrypt(plaintext))
-            print(f'Data has been encrypted and saved here: {filename}-encrypted.txt') 
+            print(f'Data has been encrypted and saved here: ./{filename}-encrypted.txt') 
     
     if args.decrypt:
         file2decrypt = input("Enter the filename you want to decrypt: ")
