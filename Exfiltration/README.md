@@ -9,6 +9,8 @@
    | `cryptor.py`| Encrypts and decrypts data using symmetric and assymetric encryption.  | Pycryptodomex |⚠ |
    | `email_exfil.py`| Encrypts data and sends it out in an email. (compatible with Windows/Linux) | pycryptodomex | ⚠ |
    | `transmit_exfil.py`| Encrypts a file and sends it out via file transfer (compatible with Windows/Linux) | Pycryptodomex |⚠ |
+   | `paste_exfil.py`| Encrypts data and posts it in Pastebin (compatible with Windows/Linux) | Pycryptodomex |⚠ |
+
 
 
 ## Useful Info
@@ -19,8 +21,9 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 * This program will begin by creating a public/private RSA key pair to encrypt/decrypt your AES key and the ciphertext.
 * <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
-* The program will use AES to encrypt the data you want to exfiltrate.
-* The encrypted data will be sent base64-encoded.
+* The program will use AES to encrypt the data you want to exfiltrate and save it on a file.
+* The encrypted data will be saved base64-encoded.
+* You can also decrypt the data you previously saved by providing the filename. 
 
 #### `email_exfil.py`
 
@@ -43,3 +46,12 @@ Some programs may need you to be mindful of additional information. I have inclu
    * Allow Anonymous FTP access
    * Create the **pub/** directory 
    * Allow Anonymous users to upload files.
+
+#### `paste_exfil.py`
+
+* This program uses hybrid encryption: You can read `cryptor.py` to have a high-level overview of its functionality.
+* <strong> Do not forget to add the RSA key pair filenames to </strong>`.gitignore` 
+* You need to sign up in [Pastebin](https://pastebin.com/signup) to use this program.
+* This program logs in your **Pastebin** account and posts your encrypted data there. It will do it differently based on your OS:
+   * It will *create an instance of a Internet Explorer COM object and use the DOM* if you are using *Windows*.
+   * It will use the *Pastebin API* for anything else.
