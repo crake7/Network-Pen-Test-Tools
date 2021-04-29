@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ## Exfiltration
 
 * Note that some tools will need you to download **additional libraries**.
@@ -45,4 +43,3 @@ Some programs may need you to be mindful of additional information. I have inclu
    * Allow Anonymous FTP access
    * Create the **pub/** directory 
    * Allow Anonymous users to upload files.
->>>>>>> 0c4354430623ff3e281fb4700391d848cd7ec9e1
