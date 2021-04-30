@@ -57,7 +57,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 #### `exfil.py`
 
-* This tool combines all the functionality from the rest of the programs in this repository:
+* This tool combines all the functionality from the programs above:
    * Encrypts/decrypts data,
    * Exfiltrates encrypted data via email,
    * Exfiltrates encrypted data via file transfer,
