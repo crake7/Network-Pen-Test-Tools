@@ -57,5 +57,10 @@ Some programs may need you to be mindful of additional information. I have inclu
 
 #### `cryptor.py`
 
-* This tool is a combination of all the tools in this repository. 
-* I am still debugging it, it will be ready TOMORROW :)
+* This tool is combines all the functionality from the test of the programs in this repository:
+   * Encrypts/decrypts data,
+   * Exfiltrates encrypted data via email,
+   * Exfiltrates encrypted data via file transfer,
+   * Exfiltrates encrypted data posting it in Pastebin.
+* Read any of the tools above, if needed.
+
