@@ -55,7 +55,7 @@ Some programs may need you to be mindful of additional information. I have inclu
    * It will *create an instance of a Internet Explorer COM object and use the DOM* if you are using *Windows*.
    * It will use the *Pastebin [API](https://pastebin.com/doc_api)* if you are using anything else.
 
-#### `cryptor.py`
+#### `exfil.py`
 
 * This tool is combines all the functionality from the test of the programs in this repository:
    * Encrypts/decrypts data,
