@@ -19,9 +19,9 @@ Some programs may need you to be mindful of additional information. I have inclu
 * You monitor any directory you wish by modifying the `PATHS` variable.
 * If you leave the code running for several days, you may find bugs or information disclosures for potential privilege escalations.
 
-#### `vulnerable_monitor.py`
+#### `vulnerable_service.py`
 
-* You can use this framework to install and run services using Python. 
-* It is required you write the scripts you wish to include in your service and save them in a file. 
+* You can use this skeleton framework to create services using Python. 
+* It is required you write the scripts you wish to include in your service and save them in a file. It currently run the scripts from `VulnService_task.vbs`.
 * Modify the `source_dir` variable with the absolute path of your scripts.
 * If you leave the code running for several days, you may find bugs or information disclosures for potential privilege escalations.
