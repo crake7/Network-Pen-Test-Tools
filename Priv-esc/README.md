@@ -1,4 +1,4 @@
-## NetworkTools
+## Privilege Escalation
 
 * Note that some tools will need you to download **additional libraries**.
 * If the **Useful Info** is checked, read the section below the table.
