@@ -9,6 +9,7 @@
    | `process_monitor.py`| Track process creation and execution. | WMI | ⚠️ |
    | `proc_privileges_monitor.py`| Track process creation, execution and its privileges. | Pywin32, WMI | ⚠️ |
    | `file_monitor.py`| Monitor any changes in the Windows temporary directories | Pywin32 | ⚠️ |
+   | `code_injector.py`| Monitor any changes in the Windows temporary directories and inject code into the target files. | Pywin32 | ⚠️ |
 
 ## Useful Info
 
@@ -46,5 +47,9 @@ This command will save the new `vulnerable_service.exe` in the **dist** subdirec
 #### `file_monitor.py`
 
 * The Windows API 'ReadDirectoryChangesW' is used to monitor the **temp** directory for any changes to files or subdirectories.
-* You can monitor any directory you wish by modifying the `PATHS` variable.
+* You can monitor any additional directory you wish by modifying the `PATHS` variable.
 * If you leave the code running for several days, you may find bugs or information disclosures for potential privilege escalations.
+
+#### `code_injector.py`
+
+* This program is built from `file_monitor.py` and will monitor the 
