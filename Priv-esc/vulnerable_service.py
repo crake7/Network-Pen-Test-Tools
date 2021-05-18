@@ -8,7 +8,7 @@ import win32event
 import win32service
 import win32serviceutil         # Handles Windows services
 
-source_dir = 'C:\\Users\\Mija\\Documents\\BlackHatPython2\\Network-Pen-Test-Tools\\Priv-Esc'
+source_dir = 'C:\\Network-Pen-Test-Tools\\Priv-Esc'         # MODIFY ME
 target_dir = 'C:\\Windows\\Temp'
 
 # Uses a base class to create vulnerable services
