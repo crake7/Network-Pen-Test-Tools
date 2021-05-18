@@ -52,4 +52,7 @@ This command will save the new `vulnerable_service.exe` in the **dist** subdirec
 
 #### `code_injector.py`
 
-* This program is built from `file_monitor.py` and will monitor the 
+* This program is built from `file_monitor.py`. Read the info above if you have questions.
+* It monitors a directory and checks for file extensions that are typically created by services. 
+* Once it finds a service that creates new a file, it will inject some code snippets to the file in order to spawn a reverse shell.
+* It will spawn a netcat connection (port 9999) with the privilege level of the originating service. I included a compiled `netcat.exe` for simplicity. 
