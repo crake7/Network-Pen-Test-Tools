@@ -7,7 +7,7 @@
    | :--------: | :---: | :---: | :---: | 
    | `vulnerable_service.py`| Framework to install a potentially vulnerable service. | Pywin32, Pyinstaller | ⚠️ |
    | `process_monitor.py`| Track process creation and execution. | WMI | ⚠️ |
-   | `proc_privileges_monitor.py`| Track process creation, execution and its privilege. | Pywin32, WMI | ⚠️ |
+   | `proc_privileges_monitor.py`| Track process creation, execution and its privileges. | Pywin32, WMI | ⚠️ |
    | `file_monitor.py`| Monitor any changes in the Windows temporary directories | Pywin32 | ⚠️ |
 
 ## Useful Info
