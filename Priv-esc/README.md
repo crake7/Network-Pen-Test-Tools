@@ -31,7 +31,7 @@ This command will save the new `vulnerable_service.exe` in the **dist** subdirec
 #### `process_monitor.py`
 
 * Monitor the processes executed **without API hooking**. Hence, avoid AV detection. 
-* This program uses the [WMI API](http://timgolden.me.uk/python/wmi/tutorial.html) to monitor the process creation event and receive intel of the process: *md, date, path, ppid, pid, owner, sid.*
+* This program uses the [WMI API](http://timgolden.me.uk/python/wmi/tutorial.html) to monitor the process creation event and receive intel of the process: *CommandLine, Time, Executable, Parent PID, PID, User, SID, Privileges.*
 * It will log all this info into a file.
 
 
