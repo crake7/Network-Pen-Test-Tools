@@ -8,7 +8,7 @@ import win32event
 import win32service
 import win32serviceutil         # Handles Windows services
 
-source_dir = 'C:\\Network-Pen-Test-Tools\\Priv-Esc'         # MODIFY ME
+source_dir = 'C:\\Network-Pen-Test-Tools\\Priv-Esc'                                         # MODIFY ME
 target_dir = 'C:\\Windows\\Temp'
 
 # Uses a base class to create vulnerable services
@@ -20,7 +20,7 @@ class VulnSvc(win32serviceutil.ServiceFramework):
     
     def __init__(self, args):
         ''' Creator of the Windows Service '''
-        self.vbs      = os.path.join(target_dir, "VulnService_scripts.vbs")
+        self.vbs      = os.path.join(target_dir, "VulnService_scripts.vbs")                 # MODIFY ME
         self.timeout  = 1000 * 60
 
         # Initialize the framework
@@ -49,7 +49,7 @@ class VulnSvc(win32serviceutil.ServiceFramework):
                 servicemanager.LogInfoMsg("service is stopping")
                 break
 
-            src = os.path.join(source_dir, "VulnService_scripts.vbs")
+            src = os.path.join(source_dir, "VulnService_scripts.vbs")                      # MODIFY ME
             # copy contents of the source file to the destination preserving permissions
             shutil.copy(src, self.vbs)
             subprocess.call("cscript.exe %s" % self.vbs, shell=False)
