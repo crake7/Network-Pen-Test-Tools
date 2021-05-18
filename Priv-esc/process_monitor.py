@@ -21,10 +21,9 @@ def monitor():
             proc_owner = new_process.GetOwner()
             owner_sid = new_process.GetOwnerSid()
 
-            privileges  = 'N/A'
             process_log_message = (
                 f'{cmdline} , {create_date} , {executable} ,'
-                f'{parent_pid} , {pid} , {proc_owner} , {owner_sid} , {privileges}'
+                f'{parent_pid} , {pid} , {proc_owner} , {owner_sid}'
                 )
             print(process_log_message)
             print()
