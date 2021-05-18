@@ -6,7 +6,8 @@
    | Program Name | Description| Libraries| Useful Info |
    | :--------: | :---: | :---: | :---: | 
    | `vulnerable_service.py`| Framework to install a potentially vulnerable service. | Pywin32, Pyinstaller | ⚠️ |
-   | `process_monitor.py`| Track process creation and execution. | Pywin32, WMI | ⚠️ |
+   | `process_monitor.py`| Track process creation and execution. | WMI | ⚠️ |
+   | `proc_privileges_monitor.py`| Track process creation, execution and its privilege. | Pywin32, WMI | ⚠️ |
    | `file_monitor.py`| Monitor any changes in the Windows temporary directories | Pywin32 | ⚠️ |
 
 ## Useful Info
@@ -34,7 +35,13 @@ This command will save the new `vulnerable_service.exe` in the **dist** subdirec
 * This program uses the [WMI API](http://timgolden.me.uk/python/wmi/tutorial.html) to monitor the process creation event and receive intel of the process: *CommandLine, Time, Executable, Parent PID, PID, User, SID.*
 * It will log all this info into a file.
 * You can only capture the complete intel of processes created with the same privilege level as you. 
+* If you leave the code running for several days, you may find running processes, scheduled tasks, malware, and software updaters. 
 
+#### `proc_privileges_monitor.py`
+
+* Monitor the processes execution with the **WIN32 API** and retrieve their enabled [Token Privileges](https://www.elastic.co/blog/introduction-to-windows-tokens-for-security-practitioners).
+* You can only capture the complete intel of processes created with the same privilege level as you. However, I strongly suggest to look for **users with wrong privileges.** 
+* It will log all this info into a file.
 
 #### `file_monitor.py`
 
