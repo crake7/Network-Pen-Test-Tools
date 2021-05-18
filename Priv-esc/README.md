@@ -26,6 +26,7 @@ Some programs may need you to be mindful of additional information. I have inclu
 * After that, modify the `source_dir` variable with the absolute path of the scripts you just wrote.
 
 <h4>How to create a service executable?</h4>
+
 1. Make sure you have modified the code accordingly. 
 2. Use **pyinstaller** to create the service as an .exe: ```C:\> pyinstaller -F --hiddenimport win32timezone vulnerable_service.py```
 This command will save the new `vulnerable_service.exe` in the **dist** subdirectory.
