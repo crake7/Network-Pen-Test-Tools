@@ -76,7 +76,18 @@ $ cd myvirtualenvfolder
    | `transmit_exfil.py`| Encrypts a file and sends it out via file transfer (compatible with Windows/Linux) | 
    | `paste_exfil.py`| Encrypts data and posts it in Pastebin (compatible with Windows/Linux) |
    | `exfil.py`| Encrypts, decrypts and exilfrates data via email, file transfer or Pastebin. (compatible with Windows/Linux)  |
-   
+
+
+* [Windows Privilege Escalation](/Priv-esc)
+
+   | Program Name | Description| 
+   | :--------: | :---: | 
+   | `vulnerable_service.py`| Framework to install a potentially vulnerable service. | 
+   | `process_monitor.py`| Track process creation and execution. (No API hooking) |
+   | `proc_privileges_monitor.py`| Track process creation, execution and its privileges. | 
+   | `file_monitor.py`| Monitor any changes in the Windows temporary directories | Pywin32 | 
+   | `code_injector.py`| Monitor any changes in the Windows temporary directories and inject code into the target files. |
+
 ## Credits
 
 This repo was created while reading the amazing book: [Black Hat Python 2](https://www.amazon.com/Black-Hat-Python-2nd-Programming/dp/1718501129/ref=sr_1_3?dchild=1&keywords=black+hat+python+2&qid=1618619206&sr=8-3) by Justin Seitz and Tim Arnold. 
