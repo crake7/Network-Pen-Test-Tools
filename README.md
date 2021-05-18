@@ -83,10 +83,10 @@ $ cd myvirtualenvfolder
    | Program Name | Description| 
    | :--------: | :---: | 
    | `vulnerable_service.py`| Framework to install a potentially vulnerable service. | 
-   | `process_monitor.py`| Track process creation and execution. (No API hooking) |
-   | `proc_privileges_monitor.py`| Track process creation, execution and its privileges. | 
-   | `file_monitor.py`| Monitor any changes in the Windows temporary directories | Pywin32 | 
-   | `code_injector.py`| Monitor any changes in the Windows temporary directories and inject code into the target files. |
+   | `process_monitor.py`| Tracks process creation and execution. (No API hooking) |
+   | `proc_privileges_monitor.py`| Tracks process creation, execution and its privileges. | 
+   | `file_monitor.py`| Monitors any changes in the Windows temporary directories. | Pywin32 | 
+   | `code_injector.py`| Monitors any new files in a specified directory, injects code into them and spawns a reverse shell. |
 
 ## Credits
 
