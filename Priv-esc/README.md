@@ -9,7 +9,7 @@
    | `process_monitor.py`| Track process creation and execution. | WMI | ⚠️ |
    | `proc_privileges_monitor.py`| Track process creation, execution and its privileges. | Pywin32, WMI | ⚠️ |
    | `file_monitor.py`| Monitor any changes in the Windows temporary directories | Pywin32 | ⚠️ |
-   | `code_injector.py`| Monitor any changes in the Windows temporary directories and inject code into the target files. | Pywin32 | ⚠️ |
+   | `code_injector.py`| Monitors any new files in a specified directory, injects code into them and spawns a reverse shell. | Pywin32 | ⚠️ |
 
 ## Useful Info
 
