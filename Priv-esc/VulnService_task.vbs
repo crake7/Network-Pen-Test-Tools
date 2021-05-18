@@ -1,3 +1,7 @@
+' SAMPLE SCRIPT TO USE WITH vulnerable_service.py
+' Creds: Black Hat Python 2
+
+
 ' Adapted from:
 ' http://gallery.technet.microsoft.com/scriptcenter/03f21031-07de-4a26-9a04-4871cd425870
 On Error Resume Next
