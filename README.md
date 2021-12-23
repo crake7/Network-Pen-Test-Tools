@@ -93,3 +93,8 @@ $ cd myvirtualenvfolder
 This repo was created while reading the amazing book: [Black Hat Python 2](https://www.amazon.com/Black-Hat-Python-2nd-Programming/dp/1718501129/ref=sr_1_3?dchild=1&keywords=black+hat+python+2&qid=1618619206&sr=8-3) by Justin Seitz and Tim Arnold. 
 
 Writers and contributors take NO responsibility and/or liability for how you choose to use any of the source code available here. By using any of the files available in this repository, you understand that you are AGREEING TO USE AT YOUR OWN RISK. Once again, ALL files available here are for EDUCATION and/or RESEARCH purposes ONLY.
+
+
+## License
+
+The code is licensed under the MIT License.
